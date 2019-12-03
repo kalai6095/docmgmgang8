@@ -1,0 +1,23 @@
+ <form [formGroup]="inputForm">
+      <md-input
+        formControlName="inputControl"
+        inputSize="small-5"
+        label="Default Input"
+        htmlId="example-default-input"
+      >
+      </md-input>
+    </form>
+
+    form value: {{ inputForm.value.inputControl }}
+
+    <div *ngIf="inputForm.controls['inputControl'].hasError('minlength')">
+      Need Min Length of 10
+    </div>
+
+    <div *ngIf="inputForm.controls['inputControl'].hasError('maxlength')">
+      Max Length should be 14
+    </div>
+
+    <div *ngIf="inputForm.controls['inputControl'].hasError('customValid')">
+      Custom Validator: Doesn't start with 'custom'
+    </div>

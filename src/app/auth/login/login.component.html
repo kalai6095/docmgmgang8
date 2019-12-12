@@ -1,49 +1,50 @@
-<form [formGroup]="inputForm">
-  <md-editable-textfield formControlName="inputControl" (handleDoneEditing)="finishEdit($event)" [(ngModel)]="editValue" inputSize="medium-4">
-  </md-editable-textfield>
-</form>
 
-form value: {{ inputForm.value.inputControl }}
-
-<div *ngIf="inputForm.controls['inputControl'].hasError('minlength')">
-  Need Min Length of 10
-</div>
-
-<div *ngIf="inputForm.controls['inputControl'].hasError('maxlength')">
-  Max Length should be 14
-</div>
-
-<div *ngIf="inputForm.controls['inputControl'].hasError('customValid')">
-  Custom Validator: Doesn't start with 'custom'
-</div>
 
 <div class="momentum md">
   <div class="md-panel md-panel--full md-panel--form md-input--filled">
     <div class="md-panel__main">
       <div class="md-panel__image">
-        <img src="/images/cisco-webex-wordmark-black.svg">
+        <!--<img src="/images/cisco-webex-wordmark-black.svg">-->
+        <div  class="">
+            <i class="icon icon-cisco-logo black"></i>
+          </div>
       </div>
+      <div class="md-panel__title" translate="loginPage.email">Real-Time Monitor Tool</div>
       <form autocomplete="off" class="md-panel__form ng-untouched ng-pristine ng-invalid" name="loginForm" novalidate="">
-        <div class="md-panel__title" translate="loginPage.email">Real-Time Monitor Tool.</div>
-        <div class="md-input-container md-input--filled">
+        
+        <div class="md-input-container ">
           <div class="md-input__wrapper">
-            <input class="md-input ng-untouched ng-pristine ng-invalid" focus-on="" name="email" required="" type="email" placeholder="Username">
+            <input class="md-input md-input--pill small ng-untouched ng-pristine ng-invalid" focus-on="" name="email" required="" type="email" placeholder="Username">
           </div>
         </div>
-        <div class="md-input-container md-input--filled">
+        <div class="md-input-container">
           <div class="md-input__wrapper">
-            <input class="md-input ng-untouched ng-pristine ng-invalid" focus-on="" name="password" required="" type="password" placeholder="Password">
+            <input class="md-input small ng-untouched ng-pristine ng-invalid" focus-on="" name="password" required="" type="password" placeholder="Password">
           </div>
         </div>
         <div class="md-panel__cta">
-          <button class="md-button--blue md-button md-button--36" md-button="" type="submit" aria-label="Sign In"
+          <button class="md-button--blue small md-button md-button--28" md-button="" type="submit" aria-label="Sign In"
             tabindex="0">
-
             <span class="md-button__children" style="opacity: 1;"> Sign In </span>
           </button>
         </div>
       </form>
     </div>
+    <div class="md-panel__footer">
+        <div  class="footer__logo">
+          <i class="icon icon-cisco-logo black"></i>
+        </div>
+        <div  class="footer__copyright">
+          <div>
+            <span>By using Cisco Services you accept the
+              <a href="http://www.ciscospark.com/terms-of-service.html"
+                target="_blank">Terms of Service</a> and
+              <a href="http://www.cisco.com/web/siteassets/legal/privacy.html" target="_blank">Privacy Statement</a>.</span>
+            <span>© 2019 Cisco and/or affiliates. All rights reserved.</span>
+          </div>
+          
+        </div>
+      </div>
   </div>
 </div>
 

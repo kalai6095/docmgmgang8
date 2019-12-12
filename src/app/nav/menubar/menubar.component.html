@@ -1,4 +1,4 @@
-<md-sidebar [withIcons]="true" [isFixed]="true"  theme="light" [withToggle]="true">
+<md-sidebar [withIcons]="true" [isFixed]="false" [withTopbar]="true"  theme="light" [withToggle]="true">
     <md-sidebar-body>
       <md-sidebar-nav>
         <md-sidebar-nav-item
@@ -9,54 +9,23 @@
         </md-sidebar-nav-item>
         <md-sidebar-nav-item
           (navItemClick) = "onClick($event)"
-          title="Users"
+          title="Performance"
           icon="people_24"
         >
         </md-sidebar-nav-item>
         <md-sidebar-nav-item
           (navItemClick) = "onClick($event)"
-          title="Places"
+          title="Alert Central"
           icon="location_24"
         >
         </md-sidebar-nav-item>
         <md-sidebar-nav-item
           (navItemClick) = "onClick($event)"
-          title="Services"
+          title="Trace & Log"
           icon="cloud_24"
         >
         </md-sidebar-nav-item>
-        <md-sidebar-nav-item
-          (navItemClick) = "onClick($event)"
-          title="Devices"
-          icon="endpoint_24"
-        >
-        </md-sidebar-nav-item>
-        <md-sidebar-nav-item
-          (navItemClick) = "onClick($event)"
-          title="Analytics"
-          icon="analysis_24"
-        >
-        </md-sidebar-nav-item>
-        <md-sidebar-nav-item
-          (navItemClick) = "onClick($event)"
-          title="Troubleshooting"
-          icon="diagnostics_24"
-        >
-        </md-sidebar-nav-item>
-        <md-sidebar-nav-item
-          (navItemClick) = "onClick($event)"
-          title="Settings"
-          icon="settings_24"
-        >
-        </md-sidebar-nav-item>
-        <md-sidebar-nav-item
-          (navItemClick) = "onClick($event)"
-          title="Development"
-          icon="tools_32"
-        >
-        </md-sidebar-nav-item>
-  
-      </md-sidebar-nav>
+            </md-sidebar-nav>
     </md-sidebar-body>
   </md-sidebar>
   

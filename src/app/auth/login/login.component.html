@@ -1,23 +1,97 @@
- <form [formGroup]="inputForm">
-      <md-input
-        formControlName="inputControl"
-        inputSize="small-5"
-        label="Default Input"
-        htmlId="example-default-input"
-      >
-      </md-input>
-    </form>
+<form [formGroup]="inputForm">
+  <md-editable-textfield formControlName="inputControl" (handleDoneEditing)="finishEdit($event)" [(ngModel)]="editValue" inputSize="medium-4">
+  </md-editable-textfield>
+</form>
 
-    form value: {{ inputForm.value.inputControl }}
+form value: {{ inputForm.value.inputControl }}
 
-    <div *ngIf="inputForm.controls['inputControl'].hasError('minlength')">
-      Need Min Length of 10
+<div *ngIf="inputForm.controls['inputControl'].hasError('minlength')">
+  Need Min Length of 10
+</div>
+
+<div *ngIf="inputForm.controls['inputControl'].hasError('maxlength')">
+  Max Length should be 14
+</div>
+
+<div *ngIf="inputForm.controls['inputControl'].hasError('customValid')">
+  Custom Validator: Doesn't start with 'custom'
+</div>
+
+<div class="momentum md">
+  <div class="md-panel md-panel--full md-panel--form md-input--filled">
+    <div class="md-panel__main">
+      <div class="md-panel__image">
+        <img src="/images/cisco-webex-wordmark-black.svg">
+      </div>
+      <form autocomplete="off" class="md-panel__form ng-untouched ng-pristine ng-invalid" name="loginForm" novalidate="">
+        <div class="md-panel__title" translate="loginPage.email">Real-Time Monitor Tool.</div>
+        <div class="md-input-container md-input--filled">
+          <div class="md-input__wrapper">
+            <input class="md-input ng-untouched ng-pristine ng-invalid" focus-on="" name="email" required="" type="email" placeholder="Username">
+          </div>
+        </div>
+        <div class="md-input-container md-input--filled">
+          <div class="md-input__wrapper">
+            <input class="md-input ng-untouched ng-pristine ng-invalid" focus-on="" name="password" required="" type="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="md-panel__cta">
+          <button class="md-button--blue md-button md-button--36" md-button="" type="submit" aria-label="Sign In"
+            tabindex="0">
+
+            <span class="md-button__children" style="opacity: 1;"> Sign In </span>
+          </button>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
 
-    <div *ngIf="inputForm.controls['inputControl'].hasError('maxlength')">
-      Max Length should be 14
+<!--<webex-login _nghost-rur-c0="">
+  <div _ngcontent-rur-c0="" class="momentum md">
+    <div _ngcontent-rur-c0="" class="md-panel md-panel--full md-panel--form md-input--filled">
+      <div _ngcontent-rur-c0="" class="md-panel__main">
+        <div _ngcontent-rur-c0="" class="md-panel__image">
+          <img _ngcontent-rur-c0="" src="/images/cisco-webex-wordmark-black.svg">
+        </div>
+        
+        <div _ngcontent-rur-c0="">
+          <div _ngcontent-rur-c0="" class="md-panel__title" translate="loginPage.email">Enter your email address</div>
+         
+          <form _ngcontent-rur-c0="" autocomplete="off" class="md-panel__form ng-untouched ng-pristine ng-invalid" name="loginForm"
+            novalidate="">
+            <div _ngcontent-rur-c0="" class="md-input-container md-input--filled">
+              <div _ngcontent-rur-c0="" class="md-input__wrapper">
+                <input _ngcontent-rur-c0="" class="md-input ng-untouched ng-pristine ng-invalid" focus-on="" name="email" required=""
+                  type="email" placeholder="Email Address">
+              </div>
+            </div>
+            <div _ngcontent-rur-c0="" class="md-panel__cta">
+              <button _ngcontent-rur-c0="" class="md-button--blue md-button md-button--36 md-button--disabled" md-button=""
+                type="submit" aria-label="Sign In" active="false" href="" tabindex="0" disabled="true">
+                
+                <span class="md-button__children" style="opacity: 1;"> Sign In </span>
+              </button>
+            </div>
+          </form>
+        </div>
+       
+      </div>
+      <div _ngcontent-rur-c0="" class="md-panel__footer">
+        <div _ngcontent-rur-c0="" class="footer__logo">
+          <i _ngcontent-rur-c0="" class="icon icon-cisco-logo"></i>
+        </div>
+        <div _ngcontent-rur-c0="" class="footer__copyright">
+          <div _ngcontent-rur-c0="">
+            <span _ngcontent-rur-c0="">By using Cisco Webex Teams Services you accept the
+              <a href="http://www.ciscospark.com/terms-of-service.html"
+                target="_blank">Terms of Service</a> and
+              <a href="http://www.cisco.com/web/siteassets/legal/privacy.html" target="_blank">Privacy Statement</a>.</span>
+            <span _ngcontent-rur-c0="">© 2019 Cisco and/or affiliates. All rights reserved.</span>
+          </div>
+          
+        </div>
+      </div>
     </div>
-
-    <div *ngIf="inputForm.controls['inputControl'].hasError('customValid')">
-      Custom Validator: Doesn't start with 'custom'
-    </div>
+  </div>
+</webex-login>-->
